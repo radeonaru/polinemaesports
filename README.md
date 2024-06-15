@@ -68,4 +68,3 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 =======
 # polinemaesports
 Website Project for Polinema Esports
->>>>>>> 86ba3a162b636cab4f29a9b601e04b38a2542fd7
