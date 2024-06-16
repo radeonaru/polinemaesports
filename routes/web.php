@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('landing');
+Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('event');
+Route::get('/events/{id}', [App\Http\Controllers\EventController::class, 'show'])->name('event.show');

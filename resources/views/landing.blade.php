@@ -36,27 +36,24 @@
             </div>
             <div class="mt-10">
                 <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    @foreach ($events as $event)
                     <div class="flex lg:w-1/2">
-                        <div class="p-4 flex-shrink-0 border rounded">
-                            <img src="../public/content/foto_event/event1.jpg" alt="Event 1" height="500"
-                                width="500">
-                            <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">Charity Mobile Legends
-                                Championship</h3>
-                            <p class="mt-2 text-lg text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit.</p>
+                        <div class="p-4 flex-shrink-0 border rounded" style="max-width: 500px;">
+                            <img src="{{ asset($event->gambar_event) }}" alt="{{ $event->nama_event }}" class="w-full h-auto">
+                            <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">{{ $event->nama_event }}</h3>
+                            <p class="mt-5 text-lg text-gray-500">{{ $event->deskripsi_singkat }}</p>
                         </div>
-                    </div>
-                    <div class="flex lg:w-1/2">
-                        <div class="p-4 flex-shrink-0 border rounded">
-                            <img src="../public/content/foto_event/event2.jpg" alt="Event 2" height="500"
-                                width="500">
-                            <h3 class="text-2xl mt-5 leading-6 font-semibold text-gray-900">Edith Collector Offline
-                                Tournament</h3>
-                            <p class="mt-2 text-lg text-gray-500">Nullam scelerisque nulla eget mauris fermentum.</p>
-                        </div>
-                    </div>
+                    </div>             
+                    @endforeach
                 </div>
             </div>
+            <div class="mt-8"></div>
+            <a href="{{ route('event') }}" class="flex pl-3 hover:text-yellow-500 group">
+                <p class="font-medium text-2xl text-black-500 group-hover:text-yellow-500">Lainnya</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 mt-1 text-black-500 group-hover:text-yellow-500" width="30" height="30">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </a>            
         </div>
         <div>
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
