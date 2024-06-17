@@ -7,7 +7,7 @@
     <title>Polinema Esports</title>
     <link rel="icon" href="../public/content/polinemaesports.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@tailus/tailus-ui@1.0.0-beta.1/dist/tailus-ui.min.css" rel="stylesheet">
+    @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 
 <body class="antialiased bg-gray-100">
@@ -18,6 +18,7 @@
     </main>
 
     @include('layouts.footer')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
