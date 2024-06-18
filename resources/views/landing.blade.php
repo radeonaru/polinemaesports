@@ -13,10 +13,10 @@
                         Polytechnic that focuses on development and achievement in the E-sports realm.</p>
                     <div class="mt-10">
                         <a href="https://linktr.ee/PMLC.ID"
-                            class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-700">Join
+                            class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-700 transition duration-300">Join
                             Us</a>
                         <a href="#events" id="learnmore-btn"
-                            class="ml-4 px-8 py-3 border border-transparent text-base font-medium rounded-md text-yellow-500 bg-yellow-100 hover:bg-yellow-200">Learn
+                            class="ml-4 px-8 py-3 border border-transparent text-base font-medium rounded-md text-yellow-500 bg-yellow-100 hover:bg-yellow-200 transition duration-300">Learn
                             More</a>
                     </div>
                 </div>
@@ -30,23 +30,33 @@
         <!-- Features Section -->
         <section class="bg-white">
             <div id="events" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
-                <div class="lg:text-left">
+                <div class="text-center p-10 pb-10">
                     <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Event Terkini
                     </p>
                 </div>
                 <div class="mt-10">
-                    <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                        @foreach ($events as $event)
-                            <div class="flex lg:w-1/2">
-                                <div class="p-4 flex-shrink-0 border rounded" style="max-width: 500px;">
-                                    <img src="{{ asset($event->gambar_event) }}" alt="{{ $event->nama_event }}"
-                                        class="w-full h-auto">
-                                    <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">{{ $event->nama_event }}
-                                    </h3>
-                                    <p class="mt-5 text-lg text-gray-500">{{ $event->deskripsi_singkat }}</p>
+                    <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                        @foreach ($events->take(2) as $event)
+                        <div class="flex place-content-center">
+                            <a href="{{ route('event.show', $event->id_event) }}">
+                                <div class="p-4 flex-shrink border rounded transition transform hover:scale-105 hover:bg-gray-100" style="max-width: 500px; max-height: 1000px">
+                                    <img src="{{ asset($event->gambar_event) }}" alt="{{ $event->nama_event }}" class="w-700 h-700">
+                                    <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">{{ $event->nama_event }}</h3>
+                                    <p class="mt-5 text-gray-500">{{ $event->deskripsi_singkat }}</p>
                                 </div>
+                            </a>
+                        </div>
+                    @endforeach
+                    
+                    @for ($i = $events->count(); $i < 2; $i++)
+                        <div class="flex place-content-center">
+                            <div class="p-4 flex-shrink-0 border rounded" style="max-width: 500px;">
+                                <div class="w-full h-48 bg-gray-200"></div>
+                                <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">Event Kosong</h3>
+                                <p class="mt-5 text-lg text-gray-500">Deskripsi event kosong.</p>
                             </div>
-                        @endforeach
+                        </div>
+                    @endfor
                     </div>
                 </div>
                 <div class="mt-8"></div>
@@ -66,28 +76,35 @@
             <section class="bg-gray-100">
             <div>
                 <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
-                    <div class="lg:text-left">
+                    <div class="text-center">
                         <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
                             Partnership</p>
                     </div>
                     <div class="mt-12">
                         <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
-                            <div class="flex lg:w-1/2">
-                                <div class="p-4 flex-shrink-0">
+
+                            <div class="flex">
+                                <div class="p-4 flex-shrink">
+                                    <a href="https://www.evos.gg/">
                                     <img src="../public/content/foto_partner/partner1.png" alt="Partner 1" height="200"
                                         width="200">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="flex lg:w-1/2">
-                                <div class="p-4 flex-shrink-0">
+                            <div class="flex">
+                                <div class="p-4 flex-shrink">
+                                    <a href="https://moontonstudentleader.com.my/msl-landing">
                                     <img src="../public/content/foto_partner/partner2.png" alt="Partner 2" height="200"
                                         width="200">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="flex lg:w-1/2">
-                                <div class="p-4 flex-shrink-0">
+                            <div class="flex">
+                                <div class="p-4 flex-shrink">
+                                    <a href="https://pmjc.id/">
                                     <img src="../public/content/foto_partner/partner3.png" alt="Partner 3" height="200"
                                         width="200">
+                                    </a>
                                 </div>
                             </div>
                         </div>
