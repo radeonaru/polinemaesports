@@ -19,6 +19,25 @@
 
     @include('layouts.footer')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        // JavaScript untuk toggle menu dropdown pada mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            var mobileMenuButton = document.getElementById('mobile-menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+    
+            // Sembunyikan menu dropdown saat halaman dimuat
+            mobileMenu.style.display = 'none';
+    
+            // Tambahkan event listener untuk tombol menu mobile
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

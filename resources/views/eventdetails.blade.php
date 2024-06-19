@@ -34,8 +34,8 @@
     <main>
         <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
-                <div class="lg:text-center">
-                    <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
+                <div class="text-center">
+                    <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900">
                         {{ $event->nama_event }}
                     </p>
                     <div

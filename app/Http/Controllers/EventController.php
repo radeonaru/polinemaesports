@@ -9,7 +9,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Events::all();
+        $events = Events::orderBy('created_at', 'desc')->get();
         foreach ($events as $event) {
             $event->deskripsi_singkat = Str::limit($event->deskripsi_event, 300);
             $event->tanggal_event = date('d F Y', strtotime($event->tanggal_event));

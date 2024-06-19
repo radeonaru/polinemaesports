@@ -35,7 +35,7 @@
                     </p>
                 </div>
                 <div class="mt-10">
-                    <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
                         @foreach ($events->take(2) as $event)
                         <div class="flex place-content-center">
                             <a href="{{ route('event.show', $event->id_event) }}">
@@ -82,7 +82,6 @@
                     </div>
                     <div class="mt-12">
                         <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
-
                             <div class="flex">
                                 <div class="p-4 flex-shrink">
                                     <a href="https://www.evos.gg/">
