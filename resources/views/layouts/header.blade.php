@@ -1,10 +1,10 @@
-<header class="bg-white shadow">
+<header class="bg-white shadow fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
+            <!-- Logo dan Tombol Toggle Mobile Menu -->
             <a href="{{ route('landing') }}">
                 <img src="../public/content/polinemaesports.png" alt="Logo Polinema Esports" width="100" height="100">
             </a>
-            <!-- Tambahkan tombol dropdown untuk mobile -->
             <div class="flex lg:hidden">
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <!-- Menu dropdown untuk mobile -->
-        <div class="lg:hidden flex flex-col items-end" id="mobile-menu">
+        <div class="lg:hidden flex-col items-end" id="mobile-menu" style="display: none;">
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('event') }}">Events</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="">Staff</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('partnership') }}">Partnership</a>
@@ -29,4 +29,3 @@
         </div>        
     </div>
 </header>
-
