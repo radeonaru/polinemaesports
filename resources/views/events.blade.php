@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200">
+    <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200 mt-5">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
             <div class="text-center">
                 <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Events</p>
             </div>
             @foreach ($events as $event)
                 <div class="mt-10">
-                    <div class="flex flex-col sm:flex-row items-start">
+                    <div class="flex flex-col sm:flex-row items-center md:items-start">
                         <div class="p-4 flex-shrink-0 border rounded mb-4 sm:mb-0 sm:mr-4">
                             <img src="{{ asset($event->gambar_event) }}" alt="Event 1" class="object-cover h-64 w-full sm:h-48 sm:w-48">
                         </div>

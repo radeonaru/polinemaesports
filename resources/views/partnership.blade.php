@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200">
+    <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200 mt-5">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
             <div class="text-center">
                 <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Meet our
