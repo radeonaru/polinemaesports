@@ -4,12 +4,12 @@
         <!-- Hero Section -->
         <section class="bg-gray-100">
             <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8">
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 text-center lg:text-left">
                     <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
                         <span class="block">Welcome to Polinema Esports</span>
                         <span class="block text-yellow-500 mt-2">#FlySoHigh!</span>
                     </h2>
-                    <p class="mt-4 text-lg leading-6 text-gray-500">Polinema E-sports is a student community In Malang State
+                    <p class="mt-4 text-lg leading-6 text-gray-500">Polinema E-sports is a student community in Malang State
                         Polytechnic that focuses on development and achievement in the E-sports realm.</p>
                     <div class="mt-10">
                         <a href="https://linktr.ee/PMLC.ID"
@@ -20,15 +20,12 @@
                             More</a>
                     </div>
                 </div>
-                <div class="mt-8 lg:mt-0 lg:w-1/2 sm:none">
-                    <img class="h-72 w-full object-cover lg:h-full sm:none" src="https://via.placeholder.com/600x400"
-                        alt="Hero Image">
+                <div class="mt-8 lg:mt-0 lg:w-1/2 hidden lg:block">
+                    <img class="h-72 w-full object-cover lg:h-full" src="https://via.placeholder.com/600x400" alt="Hero Image">
                 </div>
-            </div>
-        </section>
+            </div>    
 
         <!-- Features Section -->
-        <section class="bg-white">
             <div id="events" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
                 <div class="text-center p-10 pb-10">
                     <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Event Terkini
@@ -72,10 +69,37 @@
                     </a>
                 </div>
             </div>
+
+            <div class="text-center p-10 pb-10">
+                <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Game Division
+                </p>
+            </div>
+            <section class="relative">
+                <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
+                    <img src="../public/content/foto_divisi/MobileLegends.jpg" alt="Mobile Legends" class="w-full w-1/2 h-auto object-cover">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
+                        <img src="../public/content/foto_divisi/MobileLegendsLogo.png" alt="Mobile Legends Logo" class="w-64 h-auto w-1/2">
+                    </div>
+                </div>
             </section>
-            <section class="bg-gray-100">
+            <section class="relative">
+                <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
+                    <img src="../public/content/foto_divisi/PUBGM.jpg" alt="PUBG Mobile" class="w-full w-1/2 h-auto object-cover">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
+                        <img src="../public/content/foto_divisi/PUBGMLogo.png" alt="PUBG Mobile Logo" class="w-64 h-auto w-1/2">
+                    </div>
+                </div>
+            </section>
+            <section class="relative">
+                <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
+                    <img src="../public/content/foto_divisi/Valorant.jpg" alt="Valorant" class="w-full w-1/2 h-auto object-cover">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
+                        <img src="../public/content/foto_divisi/ValorantLogo.png" alt="Valorant Logo" class="w-64 h-auto w-1/2">
+                    </div>
+                </div>
+            </section>
             <div>
-                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
+                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8 mt-5">
                     <div class="text-center">
                         <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
                             Partnership</p>
