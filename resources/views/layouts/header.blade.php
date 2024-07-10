@@ -17,7 +17,7 @@
                 <a class="font-semibold hover:text-yellow-500" href="{{ route('event') }}">Events</a>
                 <a class="font-semibold hover:text-yellow-500" href="">Staff</a>
                 <a class="font-semibold hover:text-yellow-500" href="{{ route('partnership') }}">Partnership</a>
-                <a class="font-semibold hover:text-yellow-500" href="">About Us</a>
+                <a class="font-semibold hover:text-yellow-500" href="{{ route('about') }}">About Us</a>
             </div>
         </div>
         <!-- Menu dropdown untuk mobile -->
@@ -25,7 +25,7 @@
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('event') }}">Events</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="">Staff</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('partnership') }}">Partnership</a>
-            <a class="block mt-4 font-semibold hover:text-yellow-500" href="">About Us</a>
+            <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('about') }}">About Us</a>
         </div>        
     </div>
 </header>

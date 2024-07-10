@@ -18,3 +18,4 @@ Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->n
 Route::get('/events/{id}', [App\Http\Controllers\EventController::class, 'show'])->name('event.show');
 
 Route::get('/partnership', [App\Http\Controllers\PartnershipController::class, 'index'])->name('partnership');
+Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
