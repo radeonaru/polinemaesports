@@ -76,25 +76,33 @@
             </div>
             <section class="relative">
                 <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
-                    <img src="../public/content/foto_divisi/MobileLegends.jpg" alt="Mobile Legends" class="w-full w-1/2 h-auto object-cover">
+                    <img src="../public/content/foto_divisi/MobileLegends.jpg" alt="Mobile Legends" class="w-full h-96 object-cover">
                     <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
-                        <img src="../public/content/foto_divisi/MobileLegendsLogo.png" alt="Mobile Legends Logo" class="w-64 h-auto w-1/2">
+                        <img src="../public/content/foto_divisi/MobileLegendsLogo.png" alt="Mobile Legends Logo" class="w-80 h-auto">
                     </div>
                 </div>
             </section>
             <section class="relative">
                 <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
-                    <img src="../public/content/foto_divisi/PUBGM.jpg" alt="PUBG Mobile" class="w-full w-1/2 h-auto object-cover">
+                    <img src="../public/content/foto_divisi/PUBGM.jpg" alt="PUBG Mobile" class="w-full h-96 object-cover">
                     <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
-                        <img src="../public/content/foto_divisi/PUBGMLogo.png" alt="PUBG Mobile Logo" class="w-64 h-auto w-1/2">
+                        <img src="../public/content/foto_divisi/PUBGMLogo.png" alt="PUBG Mobile Logo" class="w-80 h-auto">
                     </div>
                 </div>
             </section>
             <section class="relative">
                 <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
-                    <img src="../public/content/foto_divisi/Valorant.jpg" alt="Valorant" class="w-full w-1/2 h-auto object-cover">
-                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex flex-col items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
-                        <img src="../public/content/foto_divisi/ValorantLogo.png" alt="Valorant Logo" class="w-64 h-auto w-1/2">
+                    <img src="../public/content/foto_divisi/Valorant.jpg" alt="Valorant" class="w-full h-96 object-cover">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
+                        <img src="../public/content/foto_divisi/ValorantLogo.png" alt="Valorant Logo" class="w-80 h-auto">
+                    </div>
+                </div>
+            </section>
+            <section class="relative">
+                <div class="flex flex-col md:flex-row bg-black bg-opacity-50 items-center">
+                    <img src="../public/content/foto_divisi/HonorOfKings.jpg" alt="Honor of Kings" class="w-full w-1/2 h-96 object-cover">
+                    <div class="absolute top-0 left-0 right-0 bottom-0 z-30 flex items-center justify-center p-6 text-center bg-black bg-opacity-50 backdrop-blur-lg">
+                        <img src="../public/content/foto_divisi/HonorOfKingsLogo.png" alt="Honor of Kings Logo" class="w-80 h-auto">
                     </div>
                 </div>
             </section>
@@ -105,7 +113,7 @@
                             Partnership</p>
                     </div>
                     <div class="mt-12">
-                        <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+                        <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-4 justify-items-center">
                             <div class="flex">
                                 <div class="p-4 flex-shrink">
                                     <a href="https://www.evos.gg/">
@@ -127,6 +135,14 @@
                                     <a href="https://pmjc.id/">
                                     <img src="../public/content/foto_partner/partner3.png" alt="Partner 3" height="200"
                                         width="200">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="p-4 flex-shrink">
+                                    <a href="https://hokacecommunity.id/">
+                                    <img src="../public/content/foto_partner/partner4.png" alt="Partner 4" height="200"
+                                        width="300">
                                     </a>
                                 </div>
                             </div>
@@ -162,48 +178,6 @@
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-        <script>
-            // Debounce function
-            function debounce(func, wait) {
-                let timeout;
-                return function() {
-                    const context = this,
-                        args = arguments;
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => func.apply(context, args), wait);
-                };
-            }
-
-            // Function to handle carousel control
-            function handleCarouselControl(event) {
-                const button = event.currentTarget;
-                const target = button.getAttribute('data-carousel-prev') ? 'prev' : 'next';
-                const carousel = document.querySelector('#default-carousel');
-                const items = carousel.querySelectorAll('[data-carousel-item]');
-                const activeItem = carousel.querySelector('[data-carousel-item].block');
-                let newIndex;
-
-                items.forEach((item, index) => {
-                    if (item === activeItem) {
-                        newIndex = target === 'prev' ? index - 1 : index + 1;
-                        if (newIndex < 0) newIndex = items.length - 1;
-                        if (newIndex >= items.length) newIndex = 0;
-                        item.classList.remove('block');
-                        item.classList.add('hidden');
-                    }
-                });
-
-                items[newIndex].classList.remove('hidden');
-                items[newIndex].classList.add('block');
-            }
-
-            // Apply debounce to the carousel control function
-            const debouncedHandleCarouselControl = debounce(handleCarouselControl, 500);
-
-            // Attach event listeners to the buttons
-            document.getElementById('prev-button').addEventListener('click', debouncedHandleCarouselControl);
-            document.getElementById('next-button').addEventListener('click', debouncedHandleCarouselControl);
-        </script>
         <script>
             document.getElementById('learnmore-btn').addEventListener('click', function(e) {
                 e.preventDefault();
