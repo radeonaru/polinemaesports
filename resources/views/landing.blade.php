@@ -3,8 +3,8 @@
     @section('content')
         <!-- Hero Section -->
         <section class="bg-gray-100">
-            <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:px-8">
-                <div class="lg:w-1/2 text-center lg:text-left">
+            <div class="max-w-7xl mx-auto py-24 lg:py-48 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
+                <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">
                         <span class="block">Welcome to Polinema Esports</span>
                         <span class="block text-yellow-500 mt-2">#FlySoHigh!</span>
@@ -20,9 +20,9 @@
                             More</a>
                     </div>
                 </div>
-                <div class="mt-8 lg:mt-0 lg:w-1/2 hidden lg:block">
+                {{-- <div class="mt-8 lg:mt-0 lg:w-1/2 hidden lg:block">
                     <img class="h-72 w-full object-cover lg:h-full" src="https://via.placeholder.com/600x400" alt="Hero Image">
-                </div>
+                </div> --}}
             </div>    
 
         <!-- Features Section -->
@@ -31,7 +31,7 @@
                     <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Event Terkini
                     </p>
                 </div>
-                <div class="mt-10">
+                <div class="mt-5">
                     <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
                         @foreach ($events->take(2) as $event)
                         <div class="flex place-content-center">
@@ -71,7 +71,7 @@
             </div>
 
             <div class="text-center p-10 pb-10">
-                <p class="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Game Division
+                <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Game Division
                 </p>
             </div>
             <section class="relative">
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-20"></div>
+                <div class="mt-10"></div>
             </div>
 
             <div id="default-carousel" class="mb-20 relative w-full" data-carousel="slide">
