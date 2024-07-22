@@ -51,7 +51,7 @@
     </header>
     
     <main>
-        <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200">
+        <article class="bg-white text-nowrap rounded-lg shadow-md overflow-hidden bg-gray-200">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
                 <div class="text-center">
                     <p class="mt-28 text-3xl leading-8 font-semibold tracking-tight text-gray-900">
