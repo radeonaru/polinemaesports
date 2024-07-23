@@ -4,11 +4,16 @@
             <nav class="flex justify-between items-center">
                 <img src="../public/content/polinemaesports.png" alt="Logo Polinema Esports" width="150" height="150">
                 @auth
-                    <form action="logout" method="POST" class="text-gray-400">
-                        @csrf
-                        <button type="submit"
-                            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
-                    </form>
+                    @php
+                        $user = Auth::user();
+                    @endphp
+                    <div class="flex flex-col items-center text-gray-400">
+                        <span>Anda login sebagai {{ $user->name }}</span>
+                        <form action="logout" method="POST" class="text-gray-400 mt-2">
+                            @csrf
+                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Logout</button>
+                        </form>
+                    </div>
                 @endauth
             </nav>
             <hr class="border-t mt-8 border-gray-300">

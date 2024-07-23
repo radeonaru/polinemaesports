@@ -20,6 +20,6 @@ Route::get('/events/{id}', [App\Http\Controllers\EventController::class, 'show']
 Route::get('/partnership', [App\Http\Controllers\PartnershipController::class, 'index'])->name('partnership');
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 
-Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login');
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [App\Http\Controllers\LoginController::class, 'authenticate']);
-Route::post('/logout', [App\Http\Controllers\LoginController::class, 'logout']);
+Route::post('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout')->middleware('auth');
