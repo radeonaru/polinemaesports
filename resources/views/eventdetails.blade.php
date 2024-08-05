@@ -59,20 +59,20 @@
                     </p>
                     <div
                         class="p-4 pt-10 flex-shrink-0 border rounded justify-items-center flex justify-center items-center">
-                        <img src="{{ asset($event->gambar_event) }}" alt="Event 1" height="750" width="750">
+                        <img src="{{ asset('storage/' . $event->gambar_event) }}" alt="Event 1" height="750" width="750">
                     </div>
                 </div>
                 <div class="mt-10">
                     <div class="flex">
                         <div>
                             <p class="m-5 text-lg text-gray-500 preserve-whitespace">{{ $event->deskripsi_event }}
-                                <hr class="border-t border-gray-300 mb-2">
-                            <div class="flex justify-end">
-                                <span class="ml-5">Created at: {{ $event->created_at }} </span>
-                            </div>
                         </div>
                         <div class="mt-auto text-gray-700 text-sm">
                         </div>
+                    </div>
+                    <hr class="border-t border-gray-300 mb-2">
+                    <div class="flex justify-end">
+                        <span class="ml-5">Created at: {{ $event->created_at }} </span>
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@
                         <div class="flex place-content-center">
                             <a href="{{ route('event.show', $event->id_event) }}">
                                 <div class="p-4 flex-shrink border rounded transition transform hover:scale-105 hover:bg-gray-100" style="max-width: 500px; max-height: 1000px">
-                                    <img src="{{ asset($event->gambar_event) }}" alt="{{ $event->nama_event }}" class="w-700 h-700">
+                                    <img src="{{ asset('storage/' . $event->gambar_event) }}" alt="{{ $event->nama_event }}" class="w-700 h-700">
                                     <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">{{ $event->nama_event }}</h3>
                                     <p class="mt-5 text-gray-500">{{ $event->deskripsi_singkat }}</p>
                                 </div>
@@ -49,8 +49,8 @@
                         <div class="flex place-content-center">
                             <div class="p-4 flex-shrink-0 border rounded" style="max-width: 500px;">
                                 <div class="w-full h-48 bg-gray-200"></div>
-                                <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">Event Kosong</h3>
-                                <p class="mt-5 text-lg text-gray-500">Deskripsi event kosong.</p>
+                                <h3 class="text-2xl mt-5 leading-6 font-medium text-gray-900">Event belum tersedia</h3>
+                                <p class="mt-5 text-lg text-gray-500">Nantikan event yang akan datang di Polinema Esports!</p>
                             </div>
                         </div>
                     @endfor
@@ -142,7 +142,7 @@
                                 <div class="p-4 flex-shrink">
                                     <a href="https://hokacecommunity.id/">
                                     <img src="../public/content/foto_partner/partner4.png" alt="Partner 4" height="200"
-                                        width="300">
+                                        width="200">
                                     </a>
                                 </div>
                             </div>

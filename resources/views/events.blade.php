@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- Body -->
-                <form action="/tambah-event" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -117,7 +117,7 @@
                 <div class="mt-10">
                     <div class="flex flex-col sm:flex-row items-center md:items-start">
                         <div class="p-4 flex-shrink-0 border rounded mb-4 sm:mb-0 sm:mr-4">
-                            <img src="{{ asset($event->gambar_event) }}" alt="Event 1"
+                            <img src="{{ asset('storage/' . $event->gambar_event) }}" alt="Event 1"
                                 class="object-cover h-64 w-full sm:h-48 sm:w-48">
                         </div>
                         <div class="w-full">
