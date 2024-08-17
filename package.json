@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "@tailus/themer": "^0.1.5",
+        "@tailwindcss/aspect-ratio": "^0.4.2",
         "lucide-react": "^0.394.0",
         "tailwind-merge": "^2.3.0"
     }

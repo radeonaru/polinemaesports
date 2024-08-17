@@ -16,9 +16,18 @@ export default {
             colors: {
                 goldLogo:"#f1b34f",
             },
+            transitionDuration: {
+                '2000': '2000ms',
+            },
+            spacing: {
+                '128': '32rem',
+                '192': '48rem',
+                '256': '64rem',
+            },
         },
     },
     plugins: [
         require('flowbite/plugin'),
+        require('@tailwindcss/aspect-ratio'),
     ],
 };
