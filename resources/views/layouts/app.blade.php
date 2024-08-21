@@ -13,7 +13,7 @@
 <body class="antialiased bg-gray-100">
     @include('layouts.header')
 
-    <main class="mt-20 p-4 sm:px-6 lg:px-8">
+    <main class="mt-20 py-4">
         @yield('content')
     </main>
 
