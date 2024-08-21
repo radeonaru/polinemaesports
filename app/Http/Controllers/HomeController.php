@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Events;
+use App\Models\News;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,8 @@ class HomeController extends Controller
             $event->tanggal_event = date('d F Y', strtotime($event->tanggal_event));
         }
 
-        return view('landing', compact('events'));
+        $news = News::orderBy('id_news', 'asc')->take(5)->get();
+
+        return view('landing', compact('events', 'news'));
     }
 }
