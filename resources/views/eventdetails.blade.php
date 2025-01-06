@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polinema Esports</title>
-    <link rel="icon" href="../public/content/polinemaesports.png" type="image/x-icon">
+    <link rel="icon" href="../storage/polinemaesports.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@tailus/tailus-ui@1.0.0-beta.1/dist/tailus-ui.min.css" rel="stylesheet">
     <style>
@@ -21,7 +21,7 @@
             <div class="flex justify-between items-center">
                 <!-- Logo dan Tombol Toggle Mobile Menu -->
                 <a href="{{ route('landing') }}">
-                    <img src="../content/polinemaesports.png" alt="Logo Polinema Esports" width="100" height="100">
+                    <img src="../storage/polinemaesports.png" alt="Logo Polinema Esports" width="100" height="100">
                 </a>
                 <div class="flex lg:hidden">
                     <button id="mobile-menu-button" class="focus:outline-none">
@@ -34,7 +34,6 @@
                 <div class="hidden lg:flex justify-end space-x-3">
                     <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('landing') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('landing') }}">Home</a>
                     <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('event') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('event') }}">Events</a>
-                    {{-- <a class="font-semibold hover:text-yellow-500" href="">Staff</a> --}}
                     <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('partnership') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('partnership') }}">Partnership</a>
                     <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('about') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('about') }}">About Us</a>
                 </div>
@@ -43,36 +42,35 @@
             <div class="lg:hidden flex-col items-end" id="mobile-menu" style="display: none;">
                 <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('landing') }}">Home</a>
                 <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('event') }}">Events</a>
-                {{-- <a class="block mt-4 font-semibold hover:text-yellow-500" href="">Staff</a> --}}
                 <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('partnership') }}">Partnership</a>
                 <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('about') }}">About Us</a>
-            </div>        
+            </div>
         </div>
     </header>
-    
+
     <main>
-        <article class="bg-white text-nowrap rounded-lg shadow-md overflow-hidden bg-gray-200">
+        <article class="bg-white text-wrap rounded-lg shadow-md overflow-hidden bg-gray-200">
             <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
                 <div class="text-center">
-                    <p class="mt-28 text-3xl leading-8 font-semibold tracking-tight text-gray-900">
+                    <p class="mt-20 sm:mt-28 text-2xl sm:text-3xl leading-8 font-semibold tracking-tight text-gray-900">
                         {{ $event->nama_event }}
                     </p>
                     <div
-                        class="p-4 pt-10 flex-shrink-0 border rounded justify-items-center flex justify-center items-center">
+                        class="p-4 pt-6 sm:pt-10 flex-shrink-0 border rounded justify-items-center flex justify-center items-center">
                         <img src="{{ asset('storage/' . $event->gambar_event) }}" alt="Event 1" height="750" width="750">
                     </div>
                 </div>
-                <div class="mt-10">
+                <div class="mt-2 sm:mt-10">
                     <div class="flex">
-                        <div>
-                            <p class="m-5 text-lg text-gray-500 preserve-whitespace">{{ $event->deskripsi_event }}
+                        <div class="text-wrap w-full">
+                            <p class="m-5 text-xs sm:text-lg text-gray-500 preserve-whitespace">{{ $event->deskripsi_event }}
                         </div>
                         <div class="mt-auto text-gray-700 text-sm">
                         </div>
                     </div>
                     <hr class="border-t border-gray-300 mb-2">
                     <div class="flex justify-end">
-                        <span class="ml-5">Created at: {{ $event->created_at }} </span>
+                        <span class="ml-5 text-sm sm:text-lg">Created at: {{ $event->created_at }} </span>
                     </div>
                 </div>
             </div>
@@ -82,7 +80,7 @@
     <footer class="bg-gray-800">
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
             <nav class="flex flex-wrap justify-left">
-                <img src="../content/polinemaesports.png" alt="Logo Polinema Esports" width="150" height="150">
+                <img src="../storage/polinemaesports.png" alt="Logo Polinema Esports" width="150" height="150">
                 {{-- <div class="px-5 py-2">
                     <a href="#" class="text-base text-gray-400 hover:text-gray-300">About</a>
                 </div>

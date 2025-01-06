@@ -4,9 +4,9 @@
      <!-- Modal -->
      <div id="modal-id" class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center opacity-0 pointer-events-none" style="transition: opacity 0.25s ease;">
         <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
-        
+
         <div class="modal-container bg-white w-11/12 md:max-w-4xl mx-auto rounded shadow-lg z-50 overflow-y-auto" style="max-height: 80vh;">
-        
+
             <div class="modal-content py-4 text-left px-6" style="max-height: 70vh; overflow-y: auto;">
                 <!-- Title -->
                 <div class="flex justify-between items-center pb-3">
@@ -97,7 +97,6 @@
         }
     </script>
 
-    {{-- Floating Button untuk Tambah Event --}}
     @auth
         <button onclick="openModal('modal-id')"
             class="fixed bottom-8 right-8 bg-yellow-500 text-white p-4 rounded-full shadow-lg flex items-center space-x-2 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
@@ -108,8 +107,8 @@
         </button>
     @endauth
 
-    <article class="bg-white rounded-lg shadow-md overflow-hidden bg-gray-200 mt-5">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
+    <article class="bg-white overflow-hidden bg-gray-100 sm:mt-4">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:items-center lg:justify-between lg:px-8">
             <div class="text-center">
                 <p class="mt-5 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">Events</p>
             </div>

@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <!-- Logo dan Tombol Toggle Mobile Menu -->
             <a href="{{ route('landing') }}">
-                <img src="../public/content/polinemaesports.png" alt="Logo Polinema Esports" width="100" height="100">
+                <img src="storage/polinemaesports.png" alt="Logo Polinema Esports" width="90" height="90">
             </a>
             <div class="flex lg:hidden">
                 <button id="mobile-menu-button" class="focus:outline-none">
@@ -16,7 +16,6 @@
             <div class="hidden lg:flex justify-end space-x-3">
                 <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('landing') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('landing') }}">Home</a>
                 <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('event') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('event') }}">Events</a>
-                {{-- <a class="font-semibold hover:text-yellow-500" href="">Staff</a> --}}
                 <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('partnership') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('partnership') }}">Partnership</a>
                 <a class="p-1 px-4 font-semibold hover:text-yellow-500 {{ request()->routeIs('about') ? 'bg-yellow-500 rounded-lg text-white' : '' }}" href="{{ route('about') }}">About Us</a>
             </div>
@@ -25,9 +24,8 @@
         <div class="lg:hidden flex-col items-end" id="mobile-menu" style="display: none;">
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('landing') }}">Home</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('event') }}">Events</a>
-            {{-- <a class="block mt-4 font-semibold hover:text-yellow-500" href="">Staff</a> --}}
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('partnership') }}">Partnership</a>
             <a class="block mt-4 font-semibold hover:text-yellow-500" href="{{ route('about') }}">About Us</a>
-        </div>        
+        </div>
     </div>
 </header>
